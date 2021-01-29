@@ -1,0 +1,179 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Reset /*/
+
+
+/* General */
+
+.logo{
+    transition: .8s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
+}
+
+.logo-content{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 5000px;
+    height: inherit
+}
+
+.logo-content img{
+    width: 50px;
+    border-radius: 5px;
+}
+
+
+.login-animate{
+    animation: login 1.5s infinite;
+}
+
+.wrap{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('images/background.webp');
+    background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+/* General /*/
+
+
+/* Painel */
+.painel-grid{
+    width: 500px;
+    height: 350px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.12);
+    -webkit-box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.12);
+    -moz-box-shadow: 1px 1px 15px 5px rgba(0,0,0,0.12);
+    padding: 0 5%;
+}
+
+.logo-grid{
+    width: 100%;
+    height: 100px;
+}
+
+.login-grid{
+    width: 100%;
+    height: 250px;
+}
+
+.painel-content{
+    display: table-cell;
+    width: 1200px;
+    height: inherit;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.painel-content img{
+    width: 150px;
+    border-radius: 5px;
+}
+
+.painel-content p{
+    margin-top: 45px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.painel-content input[type="text"]{
+    padding: 15px 25px;
+    width: 100%;
+    margin-bottom: 15px;
+    outline: none;
+    border: solid 1px rgba(95, 95, 95, 0.877);
+}
+
+.painel-content input[type="button"]{
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+
+/* Painel /*/
+
+@media screen and (max-width: 1024px){
+    .painel-grid{
+        padding: 0 7.5%;
+        height: 350px;
+    }
+
+    .logo-grid{
+        width: 100%;
+        height: 100px;
+    }
+
+    .login-grid{
+        width: 100%;
+        height: 250px;
+    }  
+}
+
+
+@media screen and (max-width: 768px){
+    .painel-grid{
+        width: 85%;
+        padding: 0 7.5%;
+        height: 350px;
+    }
+
+    .logo-grid{
+        width: 100%;
+        height: 100px;
+    }
+
+    .login-grid{
+        width: 100%;
+        height: 250px;
+    }    
+    
+}
+
+@keyframes login{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 100;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
